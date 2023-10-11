@@ -28,7 +28,8 @@ function addToBasket(productId) {
 	}
     // TODO: если товар еще не в корзине, добавить его из массива products
 	//order.push(products.find(item => item.id == productId));
-	order = [...order, {...products.find(item => item.id == productId)}];
+	//order = [...order, {...products.find(item => item.id == productId)}];
+	order.push( {...products.find(item => item.id == productId)} );
     // Эти строчки не трогаем, они отвечают за переотрисовку страницы
     renderCart();
     rerenderTotalPrice();
